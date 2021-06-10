@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org//dtd/mybatis-3-mapper.dtd">
+<!-- 1.parameterType参数类型 2.resultType返回值类型-->
+<mapper namespace="com.bosssoft.springboot5_31.dao.GoodsDao">
+    <select id="pwdByName" parameterType="com.bosssoft.springboot5_31.pojo.po.UserPO" resultType="String">
+        select pwd
+        from mybatis.user
+        <where>
+            <if test="name != null and name !=''">
+                and `name` like concat('%',#{uname},'%')
+            </if>
+        </where>
+    </select>
+
+</mapper>
