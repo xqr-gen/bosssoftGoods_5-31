@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org//dtd/mybatis-3-mapper.dtd">
+<!-- 1.parameterType参数类型 2.resultType返回值类型,        第九行有错误！！！！！！！！！  -->
+<mapper namespace="com.bosssoft.springboot5_31.dao.GoodsDao">
+    <select id="listGoods" parameterType="com.bosssoft.springboot5_31.pojo.dto.PageDTO" resultType="com.bosssoft.springboot5_31.pojo.dto.GoodsDTO">
+        select *
+        from mybatis.goods limit #{limit}*(#{limit}-1),#{limit}*(#{limit});
+    </select>
+
+</mapper>

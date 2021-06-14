@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org//dtd/mybatis-3-mapper.dtd">
+<!-- 1.parameterType参数类型 2.resultType返回值类型 -->
+<mapper namespace="com.bosssoft.springboot5_31.dao.CartDao">
+    <select id="listGoods" parameterType="com.bosssoft.springboot5_31.pojo.dto.CartDTO" resultType="com.bosssoft.springboot5_31.pojo.dto.CartDTO">
+        select * from mybatis.cart where uid=#{uid}
+    </select>
+    <delete id="deleteCartGoods" parameterType="com.bosssoft.springboot5_31.pojo.dto.CartDTO">
+        delete from mybatis.cart where cid=#{cid}
+    </delete>
+
+    <update id="updateCart" parameterType="com.bosssoft.springboot5_31.pojo.dto.CartDTO">
+        update mybatis.cert
+        set uid=#{uid},gid=#{gid},quantity=#{quantity}
+        where cid=#{cid} and uid=#{uid}
+    </update>
+
+    <insert id="addCart" parameterType="com.bosssoft.springboot5_31.pojo.dto.CartDTO">
+        insert into mybatis.cart(uid,gid,quantity) values(#{uid},#{gid},#{quantity})
+    </insert>
+</mapper>

@@ -1,0 +1,15 @@
+package com.bosssoft.springboot5_31.pojo.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class PageDTO {
+    private Integer limit;
+    private Integer pageNO;
+
+
+}
