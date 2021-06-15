@@ -16,9 +16,9 @@ import javax.validation.constraints.NotNull;
 @Slf4j
 public class UserVO {
     private Integer uid;
-    @NotNull
+    @NotNull(message = "空的")
     private String uname;
-    @NotNull
+    @NotNull(message = "空的")
     private String pwd;
 
 
