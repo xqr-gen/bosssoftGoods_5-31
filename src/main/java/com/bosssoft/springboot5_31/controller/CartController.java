@@ -55,7 +55,7 @@ public class CartController {
         return res;
     }
     @PostMapping
-    public ResultResponse addCart(@RequestBody AddCartVO addCartVO){
+    public ResultResponse addCart(@RequestBody @Validated AddCartVO addCartVO){
         ResultResponse res =new ResultResponse();
         CartDTO cartDTO=new CartDTO();
         BeanUtil.copyProperties(addCartVO,cartDTO);
@@ -75,7 +75,7 @@ public class CartController {
         return res;
     }
     @PostMapping
-    public ResultResponse updateCart(@RequestBody AddCartVO addCartVO){
+    public ResultResponse updateCart(@RequestBody @Validated AddCartVO addCartVO){
         ResultResponse res =new ResultResponse();
         CartDTO cartDTO=new CartDTO();
         BeanUtil.copyProperties(addCartVO,cartDTO);
@@ -95,7 +95,7 @@ public class CartController {
         return res;
     }
     @PostMapping
-    public ResultResponse deleteCart(@RequestBody CartVO cartVO){
+    public ResultResponse deleteCart(@RequestBody @Validated CartVO cartVO){
         ResultResponse res =new ResultResponse();
         CartDTO cartDTO=new CartDTO();
         BeanUtil.copyProperties(cartVO,cartDTO);
