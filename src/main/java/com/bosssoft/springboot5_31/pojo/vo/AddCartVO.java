@@ -8,8 +8,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class AddCartVO {
+    @NotNull(message = "空的")
     private Integer cid;
+    @NotNull(message = "空的")
     private Integer uid;
+    @NotNull(message = "空的")
     private Integer gid;
     private Integer quantity;
 }
