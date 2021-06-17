@@ -31,7 +31,7 @@ CREATE TABLE `user`  (
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES (1, 'xqr', '123456');
+INSERT INTO `user` VALUES (1, 'xqr', '6c8349cc7260ae62e3b1396831a8398f');
 
 SET FOREIGN_KEY_CHECKS = 1;
 
